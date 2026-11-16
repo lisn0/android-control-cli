@@ -30,6 +30,46 @@ python3 -B phone.py snapshot --device DEVICE_SERIAL
 python3 -B phone.py --help
 ```
 
+## Optional MCP server
+
+An MCP client can launch Android Control locally over stdio. The server only
+needs the optional MCP SDK and access to `adb` on its PATH. From the checkout,
+create an environment for the server.
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-mcp.txt
+```
+
+For a client that uses `mcpServers` JSON, replace the example paths with the
+absolute paths to the environment's Python executable and `android_mcp.py`.
+
+```json
+{
+  "mcpServers": {
+    "android-control": {
+      "command": "/absolute/path/to/android-control/.venv/bin/python",
+      "args": ["/absolute/path/to/android-control/android_mcp.py"]
+    }
+  }
+}
+```
+
+The default tools are `list_devices` (authorized serials and ADB states),
+`foreground` (focused package and activity), and `snapshot` (guarded UI summary).
+Supply the target `serial` to `foreground` and `snapshot`. To scope every tool
+to one phone, append `"--device", "DEVICE_SERIAL"` to `args`, using the serial
+shown by `phone.py devices`. The scoped read tools can then omit `serial`.
+
+To enable `tap_label`, append `"--allow-input"` after the device arguments. The
+tool acts only on that configured phone and requires a single enabled clickable
+match for the exact accessibility label. Inspect the screen again after a tap
+to verify its effect.
+
+Use a trusted local client and a test screen. Snapshots can contain private app
+content. Handle sensitive prompts manually and keep login, messaging, and
+payment screens out of the MCP workflow.
+
 ## Workflows
 
 - [App navigation and UI interaction](docs/workflows.md)
