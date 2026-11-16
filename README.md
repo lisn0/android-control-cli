@@ -73,7 +73,7 @@ With `uvx` on the client's PATH, use `"command": "uvx"` and
 With Node.js and `uvx` on PATH, launch the same MCP server from GitHub:
 
 ```sh
-npx --yes --package=github:lisn0/android-device-control android-device-control
+npx --yes --allow-git=root --package=github:lisn0/android-device-control android-device-control
 ```
 
 The launcher uses the published PyPI package. It forwards options such as
