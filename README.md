@@ -146,3 +146,17 @@ private messages, or codes. Remove those details before sharing.
 ## License
 
 [MIT](https://github.com/lisn0/android-device-control/blob/main/LICENSE)
+
+## Maintainer releases
+
+Set the same version in `pyproject.toml` and `package.json`. Build and test the
+Python distributions and the npm archive from that source. Attach these three
+files to the stable GitHub release before publishing it.
+
+- `android_device_control-X.Y.Z-py3-none-any.whl`
+- `android_device_control-X.Y.Z.tar.gz`
+- `android-device-control-X.Y.Z.tgz`
+
+Publishing the GitHub release with tag `vX.Y.Z` uploads the Python distributions
+to PyPI first and the npm launcher second. Both registries require a trusted
+publisher for `publish-pypi.yml`. The PyPI job uses the `pypi` environment.
