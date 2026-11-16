@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Android Device Control">
+  <rect width="128" height="128" rx="28" fill="#102522"/>
+  <rect x="36" y="17" width="56" height="94" rx="12" fill="#8DE0B2"/>
+  <rect x="42" y="27" width="44" height="66" rx="4" fill="#173A31"/>
+  <circle cx="64" cy="102" r="3.5" fill="#173A31"/>
+  <path d="M52 52h24M52 62h17M52 72h20" stroke="#B9F1CE" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="78" cy="72" r="7" fill="#F7C96B" stroke="#173A31" stroke-width="3"/>
+</svg>

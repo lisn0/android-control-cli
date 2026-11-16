@@ -1,0 +1,14 @@
+{
+  "name": "android-device-control",
+  "version": "0.1.0",
+  "description": "Inspect authorized Android devices and their visible UI over ADB.",
+  "mcpServers": {
+    "android-device-control": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "android-device-control@0.1.0"
+      ]
+    }
+  }
+}

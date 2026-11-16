@@ -1,0 +1,21 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "android-device-control",
+  "displayName": "Android Device Control",
+  "version": "0.1.0",
+  "description": "Inspect an authorized Android device through local ADB and read-only MCP tools.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "List the Android devices currently authorized through ADB.",
+    "Show the foreground app on my connected Android device.",
+    "Summarize the visible UI on my connected Android device."
+  ],
+  "author": {
+    "name": "lisn0",
+    "url": "https://github.com/lisn0"
+  },
+  "homepage": "https://github.com/lisn0/android-device-control",
+  "repository": "https://github.com/lisn0/android-device-control",
+  "license": "MIT",
+  "keywords": ["android", "adb", "mcp", "device-inspection"]
+}

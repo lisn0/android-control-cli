@@ -1,0 +1,13 @@
+{
+  "name": "android-device-control",
+  "version": "0.1.0",
+  "description": "Inspect authorized Android devices and their visible UI over ADB.",
+  "author": {
+    "name": "lisn0"
+  },
+  "homepage": "https://github.com/lisn0/android-device-control",
+  "repository": "https://github.com/lisn0/android-device-control",
+  "license": "MIT",
+  "mcpServers": "./.cursor-plugin/mcp.json",
+  "logo": "assets/logo.svg"
+}

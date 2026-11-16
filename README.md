@@ -124,6 +124,19 @@ Use a trusted local client and a test screen. Snapshots can contain private app
 content. Handle sensitive prompts manually and keep login, messaging, and
 payment screens out of the MCP workflow.
 
+## Client plugins
+
+The Claude Code, Antigravity, Cursor, and Gemini CLI packages launch the same local
+MCP server. Before installing, put Node.js, `uvx`, and Android SDK
+Platform-Tools on the client's PATH and authorize a test device over ADB.
+
+Open the plugin from this repository. In Claude Code, run `claude --plugin-dir ./plugins/claude`
+from a checkout. In Antigravity, use `agy plugin install .`. In Cursor, use
+**Import from Disk** in **Customize**. For Gemini CLI, install this repository with `gemini extensions install https://github.com/lisn0/android-device-control`.
+
+Ask the client to list authorized Android devices, then inspect the foreground
+app on a test device. The plugin enables read-only inspection by default.
+
 ## Workflows
 
 - [App navigation and UI interaction](https://github.com/lisn0/android-device-control/blob/main/docs/workflows.md)

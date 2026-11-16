@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "android-device-control": {
+      "command": "npx",
+      "args": ["--yes", "android-device-control@0.1.0"]
+    }
+  }
+}
