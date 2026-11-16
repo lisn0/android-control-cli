@@ -6,3 +6,6 @@ __pycache__/
 *.png
 *.xml
 *.jsonl
+/build/
+/dist/
+/*.egg-info/

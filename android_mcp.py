@@ -6,7 +6,10 @@ import argparse
 import re
 from typing import TYPE_CHECKING
 
-import phone
+if __package__:
+    from . import phone
+else:
+    import phone
 
 if TYPE_CHECKING:
     from mcp.server.fastmcp import FastMCP
@@ -50,9 +53,12 @@ def create_server(device: str | None = None, *, allow_input: bool = False) -> Fa
     except ModuleNotFoundError as exc:
         if exc.name not in ("mcp", "mcp.server.fastmcp"):
             raise
-        raise phone.PhoneError(
-            "install the optional MCP SDK with python -m pip install -r requirements-mcp.txt",
-        ) from exc
+        install_command = (
+            "python -m pip install 'android-control-cli[mcp]'"
+            if __package__
+            else "python -m pip install -r requirements-mcp.txt"
+        )
+        raise phone.PhoneError(f"install the optional MCP SDK with {install_command}") from exc
 
     server = FastMCP("Android Control")
     read_only = ToolAnnotations(readOnlyHint=True)
