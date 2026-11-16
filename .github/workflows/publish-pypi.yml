@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/android-control-cli/
+      url: https://pypi.org/project/android-device-control/
     permissions:
       contents: read
       id-token: write
@@ -41,8 +41,8 @@ jobs:
             exit 1
           fi
           version=${RELEASE_TAG#v}
-          wheel="android_control_cli-${version}-py3-none-any.whl"
-          sdist="android_control_cli-${version}.tar.gz"
+          wheel="android_device_control-${version}-py3-none-any.whl"
+          sdist="android_device_control-${version}.tar.gz"
           gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --dir dist \
             --pattern "$wheel" --pattern "$sdist"
           test -s "dist/$wheel"

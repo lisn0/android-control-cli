@@ -54,7 +54,7 @@ def create_server(device: str | None = None, *, allow_input: bool = False) -> Fa
         if exc.name not in ("mcp", "mcp.server.fastmcp"):
             raise
         install_command = (
-            "python -m pip install 'android-control-cli[mcp]'"
+            "python -m pip install 'android-device-control[mcp]'"
             if __package__
             else "python -m pip install -r requirements-mcp.txt"
         )

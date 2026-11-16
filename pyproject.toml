@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "android-control-cli"
+name = "android-device-control"
 version = "0.1.0"
 description = "Inspect and operate authorized Android devices through ADB."
 readme = "README.md"
@@ -12,20 +12,20 @@ license = "MIT"
 license-files = ["LICENSE"]
 
 [project.urls]
-Repository = "https://github.com/lisn0/android-control-cli"
-Issues = "https://github.com/lisn0/android-control-cli/issues"
+Repository = "https://github.com/lisn0/android-device-control"
+Issues = "https://github.com/lisn0/android-device-control/issues"
 
 [project.optional-dependencies]
 mcp = ["mcp>=1.28,<2"]
 
 [project.scripts]
-android-control = "android_control_cli.phone:main"
-android-control-device-info = "android_control_cli.device_info:main"
-android-control-sms = "android_control_cli.messages:main"
-android-control-receipts = "android_control_cli.receipts:main"
-android-control-mcp = "android_control_cli.android_mcp:main"
+android-control = "android_device_control.phone:main"
+android-control-device-info = "android_device_control.device_info:main"
+android-control-sms = "android_device_control.messages:main"
+android-control-receipts = "android_device_control.receipts:main"
+android-control-mcp = "android_device_control.android_mcp:main"
 
 [tool.setuptools]
-packages = ["android_control_cli"]
-package-dir = {android_control_cli = "."}
+packages = ["android_device_control"]
+package-dir = {android_device_control = "."}
 include-package-data = false

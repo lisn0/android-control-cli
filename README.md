@@ -12,7 +12,7 @@ Python 3.10 or newer is required. Install `adb` from
 and put it on your PATH. In your Python environment, install the CLI.
 
 ```sh
-python -m pip install android-control-cli
+python -m pip install android-device-control
 ```
 
 The CLI uses the Python standard library. If you are working from a clone, you
@@ -49,7 +49,7 @@ An MCP client can launch Android Control locally over stdio. The server only
 needs the optional MCP SDK and access to `adb` on its PATH.
 
 ```sh
-python -m pip install 'android-control-cli[mcp]'
+python -m pip install 'android-device-control[mcp]'
 ```
 
 For a client that uses `mcpServers` JSON, use the installed command on its PATH
@@ -66,7 +66,7 @@ or set `command` to the full path to the executable.
 ```
 
 With `uvx` on the client's PATH, use `"command": "uvx"` and
-`"args": ["--from", "android-control-cli[mcp]", "android-control-mcp"]`.
+`"args": ["--from", "android-device-control[mcp]", "android-control-mcp"]`.
 
 ### Run from a checkout
 
@@ -111,10 +111,10 @@ payment screens out of the MCP workflow.
 
 ## Workflows
 
-- [App navigation and UI interaction](https://github.com/lisn0/android-control-cli/blob/main/docs/workflows.md)
-- [Device diagnostics and SMS inspection](https://github.com/lisn0/android-control-cli/blob/main/docs/device-information.md)
-- [Manual social-account setup and receipts](https://github.com/lisn0/android-control-cli/blob/main/docs/social-account-setup.md)
-- [Design references](https://github.com/lisn0/android-control-cli/blob/main/docs/research.md)
+- [App navigation and UI interaction](https://github.com/lisn0/android-device-control/blob/main/docs/workflows.md)
+- [Device diagnostics and SMS inspection](https://github.com/lisn0/android-device-control/blob/main/docs/device-information.md)
+- [Manual social-account setup and receipts](https://github.com/lisn0/android-device-control/blob/main/docs/social-account-setup.md)
+- [Design references](https://github.com/lisn0/android-device-control/blob/main/docs/research.md)
 
 The authentication guard uses English accessibility labels and password-field
 metadata. It can miss unlabeled or non-English screens. Handle passwords,
@@ -134,4 +134,4 @@ private messages, or codes. Remove those details before sharing.
 
 ## License
 
-[MIT](https://github.com/lisn0/android-control-cli/blob/main/LICENSE)
+[MIT](https://github.com/lisn0/android-device-control/blob/main/LICENSE)
