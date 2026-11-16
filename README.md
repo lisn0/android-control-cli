@@ -68,6 +68,17 @@ or set `command` to the full path to the executable.
 With `uvx` on the client's PATH, use `"command": "uvx"` and
 `"args": ["--from", "android-device-control[mcp]", "android-control-mcp"]`.
 
+### Run with npx
+
+With Node.js and `uvx` on PATH, launch the same MCP server from GitHub:
+
+```sh
+npx --yes --package=github:lisn0/android-device-control android-device-control
+```
+
+The launcher uses the published PyPI package. It forwards options such as
+`--device DEVICE_SERIAL` to the MCP server. ADB must still be on PATH.
+
 ### Run from a checkout
 
 Create a Python environment with the MCP SDK.

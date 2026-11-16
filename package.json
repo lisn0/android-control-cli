@@ -1,0 +1,19 @@
+{
+  "name": "android-device-control",
+  "version": "0.1.0",
+  "description": "Launch the Android Device Control MCP server from PyPI.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisn0/android-device-control.git"
+  },
+  "bin": {
+    "android-device-control": "bin/mcp.mjs"
+  },
+  "files": [
+    "bin/mcp.mjs"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
