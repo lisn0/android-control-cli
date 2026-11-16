@@ -5,7 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "android-device-control"
 version = "0.1.0"
-description = "Inspect and operate authorized Android devices through ADB."
+description = "Local ADB CLI and MCP server for inspecting authorized Android devices."
+keywords = ["android", "adb", "mcp", "mcp-server", "android-automation", "device-inspection"]
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"

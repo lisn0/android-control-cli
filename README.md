@@ -1,9 +1,15 @@
-# Android Control
+# Android Device Control
 
-A local command-line tool for inspecting and operating an authorized Android
-device through ADB. Inspect the current app, select visible controls, and verify
-the result after each action. The repository includes read-only device and SMS
-diagnostics and a guide for manually setting up social accounts.
+A local ADB command-line tool and MCP server for inspecting authorized Android
+devices. Find connected devices, see the foreground app, and read the screen's
+accessibility tree. The MCP tools are read-only by default, with taps available
+when explicitly enabled for one device.
+
+[PyPI](https://pypi.org/project/android-device-control/) ·
+[npm](https://www.npmjs.com/package/android-device-control) ·
+[MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.lisn0%2Fandroid-device-control/versions/latest)
+
+[Install the CLI](#install) · [Run the MCP server](#run-the-mcp-server)
 
 ## Install
 
@@ -43,10 +49,19 @@ android-control --help
 Use `android-control-sms --help` for SMS diagnostics and
 `android-control-receipts --help` for the local setup receipt ledger.
 
-## Optional MCP server
+## Run the MCP server
 
-An MCP client can launch Android Control locally over stdio. The server only
-needs the optional MCP SDK and access to `adb` on its PATH.
+With Node.js, `uvx`, and `adb` on your MCP client's PATH, launch the local
+stdio server from npm:
+
+```sh
+npx --yes android-device-control
+```
+
+The launcher uses the published PyPI package and forwards options such as
+`--device DEVICE_SERIAL`. Call `list_devices` to check the connection.
+
+### Install from PyPI or run with uvx
 
 ```sh
 python -m pip install 'android-device-control[mcp]'
@@ -67,17 +82,6 @@ or set `command` to the full path to the executable.
 
 With `uvx` on the client's PATH, use `"command": "uvx"` and
 `"args": ["--from", "android-device-control[mcp]", "android-control-mcp"]`.
-
-### Run with npx
-
-With Node.js and `uvx` on PATH, launch the same MCP server from npm:
-
-```sh
-npx --yes android-device-control
-```
-
-The launcher uses the published PyPI package. It forwards options such as
-`--device DEVICE_SERIAL` to the MCP server. ADB must still be on PATH.
 
 ### Run from a checkout
 
