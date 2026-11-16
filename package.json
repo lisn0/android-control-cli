@@ -1,5 +1,6 @@
 {
   "name": "android-device-control",
+  "mcpName": "io.github.lisn0/android-device-control",
   "version": "0.1.0",
   "description": "Launch the Android Device Control MCP server from PyPI.",
   "license": "MIT",
