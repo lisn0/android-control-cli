@@ -110,7 +110,7 @@ executable and `android_mcp.py`.
 
 The default tools are `list_devices` (authorized serials and ADB states),
 `foreground` (focused package and activity), and `snapshot` (guarded UI summary).
-Supply the target `serial` to `foreground` and `snapshot`. To scope every tool
+All three are read-only. Supply the target `serial` to `foreground` and `snapshot`. To scope every tool
 to one phone, append `"--device", "DEVICE_SERIAL"` to `args`, using the serial
 shown by `android-control devices` or `python3 -B phone.py devices`. The scoped
 read tools can then omit `serial`.
